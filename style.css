@@ -1,0 +1,185 @@
+:root{
+    --font: 'Hanken Grotesk', sans-serif;
+
+    --LightRed: hsl(0, 100%, 67%);
+    --OrangeyYellow: hsl(39, 100%, 56%);
+    --GreenTeal: hsl(166, 100%, 37%);
+    --CobaltBlue: hsl(234, 85%, 45%);
+
+    /* ## Gradients */
+
+--LightSlateBlue: hsl(252, 100%, 67%);
+--LightRoyalBlue: hsl(241, 81%, 54%);
+
+--VioletBlue : hsla(256, 72%, 46%, 1);
+--PersianBlue : hsla(241, 72%, 46%, 0.219);
+
+
+/* ### Neutral */
+
+--WhiteColor: hsl(0, 0%, 100%);
+--PaleBlue: hsl(221, 100%, 96%);
+--LightLavender: hsl(241, 100%, 89%);
+--DarkGrayBlue: hsl(224, 30%, 27%);
+}
+body{
+    font-family: var(--font);
+}
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.result{
+    background-image: linear-gradient( var(--LightSlateBlue), var(--LightRoyalBlue));
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 25px;
+}
+
+.result h4{
+    font-size: 18px;
+    color: var(--PaleBlue);
+    padding-bottom: 30px;
+}
+
+
+.resultBox{
+    width: 50%;
+    padding: 20px;
+    
+    
+}
+.resultBox h2{
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 18px;
+    color: var(--DarkGrayBlue);
+}
+
+.resultCardMain{
+    display: flex;
+    /* width: 375px; */
+    box-shadow: 1px 1px 10px rgba(128, 128, 128, 0.363);
+    border-radius: 25px;
+    
+
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+
+.circle{
+    background-image: linear-gradient(var(--VioletBlue), var(--PersianBlue));
+    width: 153px;
+    height: 153px;
+    border-radius: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font);
+    color: var(--WhiteColor)
+}
+
+.circle p{
+    color: var(--LightLavender);
+    font-size: small;
+}
+.circle h1{
+    font-weight: 800;
+    font-size: 3.5rem;
+}
+
+.body2 h2{
+    color: var(--WhiteColor);
+    padding: 25px 0px 10px 0px;
+    font-weight: 700;
+}
+.body2 p{
+    color: var(--LightLavender);
+    /* padding: 15px 0px 10px 0px; */
+    padding: 0px 30px 25px 30px;
+    font-weight: 500;
+    font-size: 14px;
+}
+.reaction,.memory,.verbal,.visual{
+    
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+.reaction span,.memory span,.verbal span,.visual span{
+    color: var(--DarkGrayBlue);
+}
+
+.reaction{
+    color: var(--LightRed);
+    background: #fc69892a;
+    
+}
+.memory{
+    color: var(--OrangeyYellow);
+    background: #fccd692a;
+    
+}
+.verbal{
+    color: var(--GreenTeal);
+    background: #75fc692a;
+    
+}
+.visual{
+    color: var(--CobaltBlue);
+    background: #697ffc2a;
+    
+}
+
+
+.btn button{
+    width: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 50px;
+    cursor: pointer ;
+    background-image: linear-gradient( var(--LightSlateBlue), var(--LightRoyalBlue));
+    color: var(--WhiteColor);
+    font-weight: 700;
+
+}
+
+
+@media only screen and (max-width:768px) {
+    .resultCardMain{
+        display: inline-block;
+        flex-direction: column;
+        width: 100%;
+        box-shadow: none;
+    }
+    .main{
+        display: block;
+        
+    }
+    .result{
+        width: 100%;
+        border-radius: 0px 0px 20px 20px;
+    }
+    .resultBox{
+        width: 100%;
+    }
+}
